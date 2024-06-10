@@ -22,7 +22,7 @@ function App() {
       </div>
       <nav className='Navbar  fixed top-0 justify-around items-center z-20 flex text-white h-[68px]   w-full'>
         <div className='flex flex-col '>
-          <a href='/' className='font-bold text-lg font-poppins'>Chetan</a>
+          <a href='/' className='magic font-bold text-lg font-poppins'>Chetan</a>
           <a href='/' className='text-xs font-poppins'>Frontend Developer </a>
         </div>
         <div className='flex text-lg gap-10 '>
@@ -64,11 +64,11 @@ function App() {
         <div className='h-[calc(100vh-68px)] w-screen flex items-center justify-center '>
           <div className='flex flex-col gap-3 w-[76%] mx-auto  text-white'>
             <div className='flex flex-col gap-1'>
-              <span className='text-xl text-[#A4A0BD]'>WELCOME TO THE JOURNEY</span>
-              <span className='text-4xl font-bold font-poppins text-blue-500'>Explore the Overview</span>
+              <span className='text-base font-normal text-[#A4A0BD]'>WELCOME TO THE JOURNEY</span>
+              <span className='text-4xl  font-bold font-poppins text-blue-500'>Explore the Overview</span>
             </div>
-            <span className=' w-[50%] font-poppins text-[#A4A0BD] font-extralight'>Hey there! 👋 I'm a passionate software developer, skilled in JavaScript and TypeScript. With expertise in Angular, Dotnet , and Three.js, I create beautiful and efficient solutions. Let's collaborate to transform your ideas into user-friendly, scalable realities. Ready for the journey? 🚀</span>
-            <div className='w-full flex h-[400px] relative justify-evenly z-20 items-center '>
+            <span className=' w-[55%] font-poppins text-[#A4A0BD] text-[16px] font-extralight'>Hey there! 👋 I'm a passionate software developer, skilled in JavaScript and TypeScript. With expertise in Angular, Dotnet , and Three.js, I create beautiful and efficient solutions. Let's collaborate to transform your ideas into user-friendly, scalable realities. Ready for the journey? 🚀</span>
+            <div className='w-full flex h-[400px] flex-wrap gap-y-10 relative justify-evenly z-20 items-center '>
             <div className='w-[250px] h-[280px] bg-slate-600 rounded-2xl '>  
             </div>
             <div className='w-[250px] h-[280px] bg-slate-600 rounded-2xl '>  

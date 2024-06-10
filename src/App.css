@@ -1,3 +1,13 @@
+:root {
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
+  --b1: rgb(166,86,247);
+  --b2: rgb(103,78,185);
+  --b3: rgb(107,121,234);
+  --b4: rgb(89,132,229)
+}
+
 body {
   background-color: #040015;
   overflow-x: hidden;
@@ -204,4 +214,35 @@ body {
   animation-name: animationgradienttitle;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
+}
+
+.magic {
+  display: inline-block;
+  position: relative
+}
+.magic-star {
+  --size: clamp(20px, 1.5vw, 30px);
+  animation: scale .7s ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size)
+}
+.magic>.magic-star>svg {
+  animation: rotate 1s linear infinite;
+  display: block;
+  opacity: .7
+}
+.magic>.magic-star>svg>path {
+  fill: violet;
+}
+.magic>.magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right,var(--purple),var(--violet),var(--pink),var(--purple));
+  background-size: 200%;
+  --webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap
 }
