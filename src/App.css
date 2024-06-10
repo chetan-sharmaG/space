@@ -154,8 +154,10 @@ body {
 
 .Navbar {
   backdrop-filter: blur(30px);
-  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
-  border: 2px solid rgba(255, 255, 225, 0.18);
+  /* box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37); */
+  box-shadow: 0px 0px 30px rgb(99 113 234 / 37%);
+  border-top: 2px solid rgba(255, 255, 225, 0.18);
+  border-bottom: 2px solid rgba(255, 255, 225, 0.18);
 }
 
 .violet-gradient {
@@ -163,6 +165,23 @@ body {
   background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
 }
+
+.vert-move {
+
+  /* background:black; */
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+  0% { transform: translateY(18px); }
+  100% { transform: translateY(-18px); }
+}
+@keyframes mover {
+  0% { transform: translateY(18px); }
+  100% { transform: translateY(-18px); }
+}
+
 
 @keyframes animationgradienttitle {
   0% {
