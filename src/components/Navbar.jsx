@@ -20,7 +20,7 @@ const Navbar = () => {
     }
     return (
         <>
-            <div className=" w-[1250px] left-[50%] translate-x-[-50%]  h-full z-[-10] absolute  top-[-280px]  flex flex-row   items-start justify-center ">
+            <div className=" md:w-[1250px] left-[50%] translate-x-[-50%]  h-full z-[-10] absolute  top-[-280px]  flex flex-row   items-start justify-center ">
                 <video className="w-full h-auto  rotate-180 " playsInline={true} loop muted autoPlay src="/orbit.webm"></video>
             </div>
             <nav className='Navbar  fixed top-0 md:justify-around justify-between md:px-0 px-7 md:gap-20 items-center z-50 flex text-white h-[68px]   w-full'>

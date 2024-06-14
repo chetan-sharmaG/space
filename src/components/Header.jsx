@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
     return (
-        <section>
+        <section id='Intro'>
             <div className='flex lg:w-[70vw] md:w-[90vw] relative  h-screen justify-between items-start mx-auto pt-44'>
                 <div className='flex md:w-[50%] w-[70%] md:mx-0 mx-auto h-[450px] '>
                     <div className="flex flex-col  justify-center items-center mt-9">
