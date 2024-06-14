@@ -2,10 +2,15 @@
   --purple: rgb(123, 31, 162);
   --violet: rgb(103, 58, 183);
   --pink: rgb(244, 143, 177);
-  --b1: rgb(166,86,247);
-  --b2: rgb(103,78,185);
-  --b3: rgb(107,121,234);
-  --b4: rgb(89,132,229)
+  --b1: rgb(166, 86, 247);
+  --b2: rgb(103, 78, 185);
+  --b3: rgb(107, 121, 234);
+  --b4: rgb(89, 132, 229)
+}
+
+* {
+  scroll-behavior: smooth;
+  /* user-select: none; */
 }
 
 body {
@@ -179,17 +184,28 @@ body {
 .vert-move {
 
   /* background:black; */
-  -webkit-animation: mover 1s infinite  alternate;
-  animation: mover 1s infinite  alternate;
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
 }
 
 @-webkit-keyframes mover {
-  0% { transform: translateY(18px); }
-  100% { transform: translateY(-18px); }
+  0% {
+    transform: translateY(18px);
+  }
+
+  100% {
+    transform: translateY(-18px);
+  }
 }
+
 @keyframes mover {
-  0% { transform: translateY(18px); }
-  100% { transform: translateY(-18px); }
+  0% {
+    transform: translateY(18px);
+  }
+
+  100% {
+    transform: translateY(-18px);
+  }
 }
 
 
@@ -202,6 +218,7 @@ body {
     background-position: 1600px 0;
   }
 }
+
 .name-gradient {
   /* font-family: 'Scope One', serif; */
   /* font-size: 3em; */
@@ -210,7 +227,7 @@ body {
   background-size: 1600px 200px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation-duration: 1s;
+  animation-duration: 2.5s;
   animation-name: animationgradienttitle;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
@@ -220,6 +237,7 @@ body {
   display: inline-block;
   position: relative
 }
+
 .magic-star {
   --size: clamp(20px, 1.5vw, 30px);
   animation: scale .7s ease forwards;
@@ -230,19 +248,244 @@ body {
   top: var(--star-top);
   width: var(--size)
 }
+
 .magic>.magic-star>svg {
   animation: rotate 1s linear infinite;
   display: block;
   opacity: .7
 }
+
 .magic>.magic-star>svg>path {
   fill: violet;
 }
+
 .magic>.magic-text {
   animation: background-pan 3s linear infinite;
-  background: linear-gradient(to right,var(--purple),var(--violet),var(--pink),var(--purple));
+  background: linear-gradient(to right, var(--purple), var(--violet), var(--pink), var(--purple));
   background-size: 200%;
   --webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap
+}
+
+#box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+
+}
+
+.gradient-border {
+  /* overflow-y: hidden; */
+  --borderWidth: 1px;
+  /* z-index: 5; */
+  /* background: #1D1F20; */
+  position: relative;
+  border-radius: 20px;
+  /* border-radius: var(--borderWidth); */
+}
+
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  /* border-radius: calc(2 * var(--borderWidth)); */
+  border-radius: 20px;
+
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#box:hover {
+  background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
+}
+
+.description {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  border-radius: 10px;
+  background: #151030;
+  content: '';
+  width: 100%;
+  height: 100%;
+  /* Start with 0 height */
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0s 1s;
+  /* Delay the hiding transition */
+}
+
+#box:hover .description {
+  opacity: 1;
+  height: 100%;
+  animation: swipeUp 1s ease-out forwards;
+}
+
+@keyframes swipeUp {
+  0% {
+    height: 100%;
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  100% {
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* #box::before {
+ 
+  position: absolute;
+  z-index: 1;
+ 
+  content: '';
+  bottom: 0;
+  border-radius: 10px;
+
+  background: #151030;
+} */
+
+/* #box:hover::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Helloasjdn,ad";
+  animation: swipeUp 1s ;
+  animation-fill-mode: both;
+} */
+
+/* @keyframes swipeUp {
+
+  0%{
+    height: 0%;
+    width: 100%;
+    
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  
+  100%{
+    
+    height: 100%;
+    width: 100%;
+   
+  }
+  
+} */
+
+.icons {
+  position: relative;
+  animation: moveSideUp ease-in-out 2s infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes moveSideUp {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+
+  25% {
+    left: 3px;
+    top: 0px;
+  }
+
+  75% {
+    right: 3px;
+    top: 3px;
+  }
+
+  100% {
+    right: 0px;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.light-shadow {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+}
+
+#About::before {
+
+  content: '';
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+}
+
+#Projects::before {
+
+  content: '';
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+}
+
+#project {
+  /* transform: rotateX(0deg) scale(1); */
+  /* transition: transform .5s linear; */
+
+}
+
+#projecwt:hover {
+  transform: rotateX(40deg) scale(0.9);
+  transition: transform .5s linear;
+
+  /* animation: tilt 2s linear;
+  animation-fill-mode: both; */
+}
+
+@keyframes tilt {
+
+  0% {
+    transform: rotateX(0deg) scale(1);
+  }
+
+  100% {
+    transform: rotateX(40deg) scale(0.9);
+  }
+}
+
+@keyframes beats {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.beat {
+  animation: beats 1.2s infinite alternate;
+  transform-origin: center;
+}
+
+.moving {
+  transition: transform 0.5s ease-in-out;
 }
