@@ -4,7 +4,7 @@ const Navbar = () => {
     const ref = useRef();
     const [menuActive, setmenuActive] = useState(false)
 
-    const loseFocus = ()=>{
+    const loseFocus = () => {
         ref.current.src = '/menu.svg'
         setmenuActive(false)
     }
@@ -20,8 +20,11 @@ const Navbar = () => {
     }
     return (
         <>
-            <div className=" md:w-[1250px] left-[50%] translate-x-[-50%]  h-full z-[-10] absolute  top-[-280px]  flex flex-row   items-start justify-center ">
+            <div className=" md:w-[1250px]  left-[50%] translate-x-[-50%]  h-full z-[-10] absolute  top-[-280px]  flex flex-row   items-start justify-center ">
                 <video className="w-full h-auto  rotate-180 " playsInline={true} loop muted autoPlay src="/orbit.webm"></video>
+            </div>
+            <div className=" md:hidden w-full h-full z-[-10] absolute left-[50%] translate-x-[-50%] md:top-[-280px] sm:top-[-296px] top-[-300px] flex flex-row  overflow-clip items-start justify-center ">
+                <video className="w-full h-full  rotate-180  scale-150 " playsInline={true} loop muted autoPlay src="/orbit.webm"></video>
             </div>
             <nav className='Navbar  fixed top-0 md:justify-around justify-between md:px-0 px-7 md:gap-20 items-center z-50 flex text-white h-[68px]   w-full'>
                 <div className='flex flex-col '>
