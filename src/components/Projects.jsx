@@ -18,7 +18,7 @@ const Projects = () => {
             { name: "RestApi", color: "text-red-500" },
             { name: "Redux", color: "text-yellow-500" }
         ],
-        projectLink: "https://github.com/chetan-sharmaG/Newzify-News-App",
+        projectLink: "https://newzify-news-app.vercel.app/",
         projectGithub: "https://github.com/chetan-sharmaG/Newzify-News-App"
     }, {
         projectIndex: "project2",
