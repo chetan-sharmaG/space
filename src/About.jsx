@@ -7,7 +7,7 @@ const About = () => {
 
     const [ref, inView] = useInView({
         triggerOnce: false,
-        threshold: 0.5
+       
     });
 
     React.useEffect(() => {

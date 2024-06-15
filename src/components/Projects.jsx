@@ -7,10 +7,36 @@ import ReactCardFlip from 'react-card-flip'
 const Projects = () => {
 
     const [flippedCard, setFlippedCard] = useState(null);
-    const [projects,setprojects]=useState([{
+    const [projects, setprojects] = useState([{
         projectIndex: "project1",
+        projectName: "Newzify",
+        projectImage: "/newzifyDesk.png",
+        projectDescription: "Discover Newzify, the ultimate news hub! Browse global headlines and trending stories by keywords in one elegant, classy app. Stay informed, entertained, and maybe even chuckle a bit – because who said staying updated can't be stylish and fun?",
+        projectTechStack: [
+            { name: "React.js", color: "text-blue-500" },
+            { name: "Tailwind", color: "text-green-500" },
+            { name: "RestApi", color: "text-red-500" },
+            { name: "Redux", color: "text-yellow-500" }
+        ],
+        projectLink: "https://github.com/chetan-sharmaG/Newzify-News-App",
+        projectGithub: "https://github.com/chetan-sharmaG/Newzify-News-App"
+    }, {
+        projectIndex: "project2",
+        projectName: "BuyMeAPopcorn",
+        projectImage: "/popcornDesk.png",
+        projectDescription: "Popcorn is a user-friendly platform where creators showcase their work and connect with fans. Earn 'popcorns,' a unique currency, sent straight to your Razorpay account without service charges. Be a creator, a fan, or both, and enjoy secure, private, and fun interactions. Let’s get popping!",
+        projectTechStack: [
+            { name: "Next.js", color: "text-blue-500" },
+            { name: "Tailwind", color: "text-green-500" },
+            { name: "Firebase", color: "text-red-500" },
+            { name: "MongoDb", color: "text-yellow-500" }
+        ],
+        projectLink: "https://get-me-a-pop-corn.vercel.app/",
+        projectGithub: "https://github.com/chetan-sharmaG/get_Me_a_PopCorn"
+    }, {
+        projectIndex: "project3",
         projectName: "VALTRACKER",
-        projectImage: "/workDemo1.png",
+        projectImage: "/valTrackerDesk.png",
         projectDescription: "The Valorant Match-Tracking Website provides comprehensive match analytics, agent details, and map insights for Valorant players. Its intuitive interface and extensive features make it an invaluable tool for enhancing gameplay strategy and performance",
         projectTechStack: [
             { name: "JavaScript", color: "text-blue-500" },
@@ -22,7 +48,7 @@ const Projects = () => {
         projectGithub: "https://github.com/chetan-sharmaG/ValTRacker"
     },
     {
-        projectIndex: "project2",
+        projectIndex: "project4",
         projectName: "PassKeeper",
         projectImage: "/passkeeper1.png",
         projectDescription: "Welcome to 'PassKeeper' - your very own digital keyring! Our handy tool stashes your URLs, usernames, and passwords, storing them securely in your local treasure chest or our impregnable Google cloud vault. Accessible anytime, anywhere, on any device - forget about forgetting passwords, let's make memory loss fun!",
@@ -30,13 +56,13 @@ const Projects = () => {
             { name: "React.js", color: "text-blue-500" },
             { name: "NodeJs", color: "text-green-500" },
             { name: "Tailwind", color: "text-red-500" },
-            { name: "Firebase", color: "text-yellow-500" }
+            { name: "MongoDb", color: "text-yellow-500" }
         ],
         projectLink: "https://chetan-sharmag.github.io/ReactPassKeeper/",
         projectGithub: "https://github.com/chetan-sharmaG/PassKeeper"
     },
     {
-        projectIndex: "project3",
+        projectIndex: "project5",
         projectName: "CLassRoom",
         projectImage: "/classroom.png",
         projectDescription: "ClassRoom is a mobile application built with Flutter, revolutionizing education by streamlining student engagement and facilitating communication within educational institutions. It offers features like a notes organizer, calendar manager, announcement broadcaster, user directory, and ERP integration, all in a user-friendly interface. ClassRoom enhances learning experiences and efficiently manages course materials and announcements.",
@@ -53,7 +79,7 @@ const Projects = () => {
 
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 0.5
+        
 
     });
     React.useEffect(() => {
@@ -68,7 +94,7 @@ const Projects = () => {
         // exit: { opacity: 0, scale: 0.8 },
     }
 
-    
+
 
     const goTo = (link) => {
         if (link)
@@ -89,7 +115,7 @@ const Projects = () => {
 
                             return (
                                 <motion.div
-                                key={project.projectGithub}
+                                    key={project.projectGithub}
                                     initial={{ opacity: 0, y: 100 }}
                                     whileInView="visible"
                                     viewport={{ once: true }}
@@ -100,7 +126,7 @@ const Projects = () => {
                                     }}
                                     transition={{
                                         duration: 0.5,
-                                        delay: index * 0.8,
+                                        delay: index * 0.5,
                                         ease: [0, 0.71, 0.2, 1.01],
                                     }}
                                 >
@@ -109,17 +135,17 @@ const Projects = () => {
 
                                             onMouseEnter={() => setFlippedCard(`project${index}`)}
                                             className='hover:z-[-1] flex flex-col sm:w-[370px] w-[300px] sm:max-h-[580px] min-h-[280px] max-h-[500px] p-4 gap-4 relative z-1 rounded-2xl bg-[#151030]  '>
-                                            <div className='w-full md:h-[250px] h-[200px]'>
-                                                <img src={project.projectImage} className='w-full rounded-lg h-full object-fill' />
+                                            <div className='w-full '>
+                                                <img src={project.projectImage} className='w-full rounded-lg     object-fill' />
                                             </div>
                                             <div className='flex justify-center  gap-2  flex-col w-full h-fit'>
-                                                <h1 className='font-bold sm:text-[24px] text-[20px] '>{project.projectName}
+                                                <h1 className='font-normal font-poppins sm:text-[24px] text-[20px] '>{project.projectName}
                                                 </h1>
                                                 <h1 className='text-[14px] line-clamp-6 overflow-hidden font-normal text-[#AAA6C3]'>{project.projectDescription}</h1>
                                                 <div className='flex sm:flex-nowrap flex-wrap  gap-3 mt-3'>
                                                     {project.projectTechStack.map((tech, index1) => {
                                                         return (
-                                    
+
                                                             <h3 key={tech.name} className={`text-sm ${tech.color}`}>#{tech.name}</h3>
                                                         )
                                                     })}
@@ -135,8 +161,8 @@ const Projects = () => {
                                             <div className='relative   '>
                                                 <div className='w-full flex collapse flex-col gap-1 opacity-0 user-select-none  items-center justify-between'>
 
-                                                    <div className='w-full  h-[200px]'>
-                                                        <img src='/workDemo1.png' className='w-full rounded-lg h-full object-fill' />
+                                                    <div className='w-full  '>
+                                                        <img src={project.projectImage} className='w-full rounded-lg h-full object-fill' />
                                                     </div>
                                                     <div className='flex justify-center  gap-2  flex-col w-full h-fit'>
                                                         <h1 className='font-bold text-[20px] sm:text-[24px] '>ch

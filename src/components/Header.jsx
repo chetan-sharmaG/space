@@ -10,7 +10,7 @@ const Header = () => {
                         <div className="w-1 relative z-10  sm:h-[450px] h-[400px] violet-gradient sm:mt-0"></div>
                     </div>
                     <div className='flex flex-col md:items-start md:justify-start items-center justify-center p-1 gap-6 mt-14 md:w-[400px] text-white'>
-                        <h1 className='flex font-extrabold sm:justify-normal justify-center sm:text-start  gap-y-6  flex-wrap md:text-7xl sm:text-[50px] text-[60px] whitespace-pre-line '>Hi, I'm&nbsp; <p className='name-gradient font-poppins'> Chetan</p></h1>
+                        <h1 className='flex font-extrabold sm:justify-normal justify-center sm:text-start  gap-y-6  flex-wrap md:text-7xl sm:text-[50px] text-[60px] whitespace-pre-line font-mono'><p className='cursive'>Hi,  </p>I'm&nbsp;<p className='name-gradient font-poppins'> Chetan</p></h1>
                         <span className='md:text-2xl w-[80%] md:text-start text-center md:w-full text-[20px] font-poppins'>
                         I design and code beautifully simple things, and I love what I do.
                         </span>

@@ -7,7 +7,9 @@
   --b3: rgb(107, 121, 234);
   --b4: rgb(89, 132, 229)
 }
-
+.cursive{
+  font-family: cursive;
+}
 * {
   scroll-behavior: smooth;
   /* user-select: none; */
