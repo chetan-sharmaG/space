@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div className='md:flex hidden text-lg gap-10 text-[#88869B] font-[500]'>
                     <a href='#About' className='font-poppins  hover:text-white'>About</a>
                     <a href='#Projects' className='font-poppins hover:text-white'>Work</a>
-                    <a href='#' className='font-poppins hover:text-white'>Contact</a>
+                    <a href='#contact' className='font-poppins hover:text-white'>Contact</a>
                 </div>
                 <div className='menu relative z-10 md:hidden '>
                     <img ref={ref} onClick={() => menuButton()} src='/menu.svg' className='cursor-pointer'></img>
@@ -43,7 +43,7 @@ const Navbar = () => {
                     <div className='w-[150px] md:hidden flex flex-col p-3 absolute items-start text-start justify-evenly bottom-[-165px] rounded-xl right-[30px] h-[160px] text-[#88869B] font-[500] text-lg bg-[#371c5c]'>
                         <a href='#About' onClick={loseFocus} className='font-poppins  hover:text-white'>About</a>
                         <a href='#Projects' onClick={loseFocus} className='font-poppins hover:text-white'>Work</a>
-                        <a href='#' onClick={loseFocus} className='font-poppins hover:text-white'>Contact</a>
+                        <a href='#contact' onClick={loseFocus} className='font-poppins hover:text-white'>Contact</a>
 
                     </div>}
             </nav>

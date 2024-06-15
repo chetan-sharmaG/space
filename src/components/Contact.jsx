@@ -45,11 +45,11 @@ const Contact = () => {
 
 
     return (
-        <section id='contact' className='w-full relative z-10 flex item-center mb-20 justify-center '>
+        <section id='contact' className='w-full  relative z-10  flex item-center  justify-center '>
 
             <div className='flex md:w-[70vw] w-[80vw] flex-col rounded-2xl bg-[#100D25] mx-auto p-7 '>
 
-                <form onSubmit={handleSubmit} className='flex flex-col gap-8 ' >
+                <form onSubmit={handleSubmit}  className='flex flex-col gap-8 ' >
                     <div className='flex flex-col gap-0'>
                         <h1 className='text-base font-[400] text-[#AAA6C3]'>GET IN TOUCH</h1>
                         <h1 className='text-[36px] font-[700] text-[#9354E4] '>Contact.</h1>

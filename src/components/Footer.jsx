@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <section>
-            <div className=' md:w-[70vw] w-[80vw] relative z-10 flex rounded-2xl my-5 mx-auto '>
+            <div className=' md:w-[70vw] w-[80vw] relative z-10 flex rounded-2xl mt-10 mb-5 mx-auto '>
                 <div className='logos flex w-full items-center justify-between gap-10'>
                     <div className='flex gap-10 items-center'>
                         <a href='https://www.linkedin.com/in/chetan-sharma-a098281a0/' target='_blank'>
