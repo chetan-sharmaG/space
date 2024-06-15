@@ -278,13 +278,11 @@ body {
 }
 
 .gradient-border {
-  /* overflow-y: hidden; */
+  
   --borderWidth: 1px;
-  /* z-index: 5; */
-  /* background: #1D1F20; */
   position: relative;
   border-radius: 20px;
-  /* border-radius: var(--borderWidth); */
+ 
 }
 
 .gradient-border:after {
@@ -361,45 +359,7 @@ body {
   }
 }
 
-/* #box::before {
- 
-  position: absolute;
-  z-index: 1;
- 
-  content: '';
-  bottom: 0;
-  border-radius: 10px;
 
-  background: #151030;
-} */
-
-/* #box:hover::before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  content: "Helloasjdn,ad";
-  animation: swipeUp 1s ;
-  animation-fill-mode: both;
-} */
-
-/* @keyframes swipeUp {
-
-  0%{
-    height: 0%;
-    width: 100%;
-    
-    opacity: 0;
-    transform: translateY(10%);
-  }
-  
-  100%{
-    
-    height: 100%;
-    width: 100%;
-   
-  }
-  
-} */
 
 .icons {
   position: relative;

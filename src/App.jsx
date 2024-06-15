@@ -10,6 +10,7 @@ import Skills from './components/Skills'
 import Security from './components/Security'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,7 @@ function App() {
       {/* <Security/> */}
       <Projects/>
       <Contact/>
+      <Footer/>
     </>
   )
 }
