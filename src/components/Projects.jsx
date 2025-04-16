@@ -109,7 +109,9 @@ const Projects = () => {
                         <span className='md:text-[40px] text-[24px] leading-[40px] font-bold font-poppins text-[#9354E4]'>Projects</span>
                     </div>
                     <span className=' md:w-[70%] w-[90%] leading-[26px sm:leading-[30px] font-poppins text-[#AAA6C3] text-[17px] font-light'>Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.</span>
-                    <div onMouseLeave={() => setFlippedCard(null)} className='flex   flex-wrap gap-5 justify-center  items-center w-[95%]  mx-auto'>
+                    <div 
+                    // onMouseLeave={() => setFlippedCard(null)}
+                     className='flex   flex-wrap gap-5 justify-center  items-center w-[95%]  mx-auto'>
                         {projects.map((project, index) => {
 
 
@@ -133,7 +135,7 @@ const Projects = () => {
                                     <ReactCardFlip isFlipped={flippedCard === `project${index}`} flipDirection="horizontal" className='containerBox w-full h-full'>
                                         <div id='project'
 
-                                            onMouseEnter={() => setFlippedCard(`project${index}`)}
+                                            onMouseOver={() => setFlippedCard(`project${index}`)}
                                             className='hover:z-[-1] flex flex-col sm:w-[370px] w-[300px] sm:max-h-[580px] min-h-[280px] max-h-[500px] p-4 gap-4 relative z-1 rounded-2xl bg-[#151030]  '>
                                             <div className='w-full '>
                                                 <img src={project.projectImage} className='w-full rounded-lg     object-fill' />
@@ -157,7 +159,7 @@ const Projects = () => {
                                         </div>
                                         <div id='project'
                                             onMouseLeave={() => setFlippedCard(null)}
-                                            className='flex flex-col sm::w-[370px] w-[300px] sm:max-h-[580px] min-h-[280px] max-h-[500px]   p-4 gap-4 relative z-1 rounded-2xl  bg-[#151030]  '>
+                                            className='flex flex-col sm::w-[370px] w-[370px] sm:max-h-[580px] min-h-[280px] max-h-[500px]   p-4 gap-4 relative z-1 rounded-2xl  bg-[#151030]  '>
                                             <div className='relative   '>
                                                 <div className='w-full flex collapse flex-col gap-1 opacity-0 user-select-none  items-center justify-between'>
 

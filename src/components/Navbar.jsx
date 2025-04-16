@@ -27,11 +27,11 @@ const Navbar = () => {
                 <video className="w-full h-full  rotate-180  scale-150 " playsInline={true} loop muted autoPlay src="/orbit.webm"></video>
             </div>
             <nav className='Navbar  fixed top-0 md:justify-around justify-between md:px-0 px-7 md:gap-20 items-center z-50 flex text-white h-[68px]   w-full'>
-                <div className='flex flex-col '>
-                    <a href='/' className='magic font-bold text-lg font-poppins'>Chetan</a>
+                <div className='flex flex-col leftToRight'>
+                    <a href='/' className=' magic font-bold text-lg font-poppins'>Chetan</a>
                     <a href='/' className='text-xs font-poppins'>Frontend Developer </a>
                 </div>
-                <div className='md:flex hidden text-lg gap-10 text-[#88869B] font-[500]'>
+                <div className='rightToLeft md:flex hidden text-lg gap-10 text-[#88869B] font-[500]'>
                     <a href='#About' className='font-poppins  hover:text-white'>About</a>
                     <a href='#Projects' className='font-poppins hover:text-white'>Work</a>
                     <a href='#contact' className='font-poppins hover:text-white'>Contact</a>
