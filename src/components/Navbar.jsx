@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 
-const Navbar = () => {
+const Navbar = ({showPortfolio}) => {
     const ref = useRef();
     const [menuActive, setmenuActive] = useState(false)
 
@@ -20,16 +20,24 @@ const Navbar = () => {
     }
     return (
         <>
-            <div className=" md:w-[1250px]  left-[50%] translate-x-[-50%]  h-full z-[-10] absolute  top-[-280px]  flex flex-row   items-start justify-center ">
-                <video className="w-full h-auto  rotate-180 " playsInline={true} loop muted autoPlay src="/orbit.webm"></video>
-            </div>
-            <div className=" md:hidden w-full h-full z-[-10] absolute left-[50%] translate-x-[-50%] md:top-[-280px] sm:top-[-296px] top-[-300px] flex flex-row  overflow-clip items-start justify-center ">
-                <video className="w-full h-full  rotate-180  scale-150 " playsInline={true} loop muted autoPlay src="/orbit.webm"></video>
-            </div>
-            <nav className='Navbar  fixed top-0 md:justify-around justify-between md:px-0 px-7 md:gap-20 items-center z-50 flex text-white h-[68px]   w-full'>
-                <div className='flex flex-col leftToRight'>
-                    <a href='/' className=' magic font-bold text-lg font-poppins'>Chetan</a>
-                    <a href='/' className='text-xs font-poppins'>Frontend Developer </a>
+            {showPortfolio && (
+        <>
+          <div className="element-fade-in  md:w-[1250px] left-[50%] translate-x-[-50%] h-full z-[-10] absolute top-[-280px] flex flex-row items-start justify-center">
+            <video  className="w-full h-auto rotate-180" playsInline loop muted autoPlay  >
+              <source src="/orbit1.webm" type="video/webm" />
+              <source src="/orbit.mp4" type="video/mp4" />
+
+            </video>
+          </div>
+          <div className="element-fade-in  md:hidden w-full h-full z-[-10] absolute left-[50%] translate-x-[-50%] md:top-[-280px] sm:top-[-296px] top-[-300px] flex flex-row overflow-clip items-start justify-center">
+            <video className="w-full h-full rotate-180 scale-150" playsInline loop muted autoPlay src="/orbit.webm"></video>
+          </div>
+        </>
+      )}
+            <nav className='element-fade-in  Navbar  fixed top-0 md:justify-around justify-between md:px-0 px-7 md:gap-20 items-center z-50 flex text-white h-[68px]   w-full'>
+                <div onClick={()=>{window.scrollTo(0,0)}}  className='flex flex-col leftToRight cursor-pointer'>
+                    <div  className=' magic font-bold text-lg font-poppins'>Chetan</div>
+                    <div  className='text-xs font-poppins'>Frontend Developer </div>
                 </div>
                 <div className='rightToLeft md:flex hidden text-lg gap-10 text-[#88869B] font-[500]'>
                     <a href='#About' className='font-poppins  hover:text-white'>About</a>

@@ -1,123 +1,122 @@
 /* Starfield.css */
 .starfield {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: transparent;
-  }
-  
-  .star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    border-radius: 50%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: transparent;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: moveStar linear infinite, twinkle 1.5s infinite ease-in-out;
+}
+
+/* Twinkling effect */
+@keyframes twinkle {
+  0% {
     opacity: 0.8;
-    animation: moveStar linear infinite, twinkle 1.5s infinite ease-in-out;
   }
-  
-  /* Twinkling effect */
-  @keyframes twinkle {
-    0% {
-      opacity: 0.8;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0.8;
-    }
+  50% {
+    opacity: 1;
   }
-  
-  /* Moving stars animation (bottom to top) */
-  @keyframes moveStar {
-    from {
-      transform: translateY(100vh);
-    }
-    to {
-      transform: translateY(-100vh);
-    }
+  100% {
+    opacity: 0.8;
   }
-  
-  /* Comet trail effect */
-  .comet {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 0 20px 5px white; /* Comet tail effect */
-    animation: moveComet linear infinite;
-    opacity: 0.9;
+}
+
+/* Moving stars animation (bottom to top) */
+@keyframes moveStar {
+  from {
+    transform: translateY(100vh);
   }
-  
-  /* Comet movement */
-  @keyframes moveComet {
-    from {
-      transform: translateY(100vh) translateX(0);
-    }
-    to {
-      transform: translateY(-100vh) translateX(50vw);
-    }
+  to {
+    transform: translateY(-100vh);
   }
-  
-  /* Parallax background layers */
-  .layer1, .layer2, .layer3 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
+}
+
+/* Comet trail effect */
+.comet {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px white; /* Comet tail effect */
+  animation: moveComet linear infinite;
+  opacity: 0.9;
+}
+
+/* Comet movement */
+@keyframes moveComet {
+  from {
+    transform: translateY(100vh) translateX(0);
   }
-  
-  .layer1 {
-    background: transparent url('https://i.imgur.com/8bYfVZl.png') repeat;
-    background-size: 2px 2px;
-    animation: moveStars1 100s linear infinite;
+  to {
+    transform: translateY(-100vh) translateX(50vw);
   }
-  
-  .layer2 {
-    background: transparent url('https://i.imgur.com/8bYfVZl.png') repeat;
-    background-size: 3px 3px;
-    animation: moveStars2 150s linear infinite;
+}
+
+/* Parallax background layers */
+.layer1, .layer2, .layer3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.layer1 {
+  background: transparent url('https://i.imgur.com/8bYfVZl.png') repeat;
+  background-size: 2px 2px;
+  animation: moveStars1 100s linear infinite;
+}
+
+.layer2 {
+  background: transparent url('https://i.imgur.com/8bYfVZl.png') repeat;
+  background-size: 3px 3px;
+  animation: moveStars2 150s linear infinite;
+}
+
+.layer3 {
+  background: transparent url('https://i.imgur.com/8bYfVZl.png') repeat;
+  background-size: 4px 4px;
+  animation: moveStars3 200s linear infinite;
+}
+
+/* Parallax animation for layers */
+@keyframes moveStars1 {
+  0% {
+    transform: translateY(100vh);
   }
-  
-  .layer3 {
-    background: transparent url('https://i.imgur.com/8bYfVZl.png') repeat;
-    background-size: 4px 4px;
-    animation: moveStars3 200s linear infinite;
+  100% {
+    transform: translateY(-100vh);
   }
-  
-  /* Parallax animation for layers */
-  @keyframes moveStars1 {
-    0% {
-      transform: translateY(100vh);
-    }
-    100% {
-      transform: translateY(-100vh);
-    }
+}
+
+@keyframes moveStars2 {
+  0% {
+    transform: translateY(100vh);
   }
-  
-  @keyframes moveStars2 {
-    0% {
-      transform: translateY(100vh);
-    }
-    100% {
-      transform: translateY(-100vh);
-    }
+  100% {
+    transform: translateY(-100vh);
   }
-  
-  @keyframes moveStars3 {
-    0% {
-      transform: translateY(100vh);
-    }
-    100% {
-      transform: translateY(-100vh);
-    }
+}
+
+@keyframes moveStars3 {
+  0% {
+    transform: translateY(100vh);
   }
-  
+  100% {
+    transform: translateY(-100vh);
+  }
+}

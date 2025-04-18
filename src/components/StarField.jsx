@@ -8,8 +8,8 @@ const Starfield = () => {
   useEffect(() => {
     const generatedStars = Array.from({ length: 100 }).map((_, index) => ({
       id: index,
-      top: `${Math.random() * 100}vh`,  // Random position from bottom to top
-      left: `${Math.random() * 100}vw`, // Random position horizontally
+      top: `${Math.random() * 100}vh`,  
+      left: `${Math.random() * 100}vw`, 
       duration: 5 + Math.random() * 10,
       delay: Math.random() * 5
     }));

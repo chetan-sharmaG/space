@@ -182,8 +182,8 @@ body {
 .vert-move {
 
   /* background:black; */
-  -webkit-animation: mover 1s infinite alternate;
-  animation: mover 1s infinite alternate;
+  -webkit-animation: mover 1s infinite alternate !important;
+  animation: mover 1s infinite alternate !important;
 }
 
 @-webkit-keyframes mover {
@@ -542,19 +542,19 @@ body {
 
 
 .personDetails {
-  animation: slideInLeft 1s ease-out forwards;
+  animation: slideInLeft .5s ease-in forwards;
 }
 
 .skills-image {
-  animation: slideInRight 1s ease-out forwards;
+  animation: slideInRight .5s ease-in forwards;
 }
 
 .leftToRight{
-  animation: slideInLeft 1s ease-out forwards;
+  animation: slideInLeft .5s ease-in forwards;
 }
 
 .rightToLeft{
-  animation: slideInRight 1s ease-out forwards;
+  animation: slideInRight .5s ease-in forwards;
 }
 @keyframes slideInLeft {
   0% {
@@ -575,7 +575,7 @@ body {
 }
 
 .bottonToTop{
-  animation: slideInTop 1s ease-out forwards;
+  animation: slideInTop 1s ease-in forwards, mover 1s infinite alternate ;
 }
 @keyframes slideInTop{
   0% {
@@ -584,4 +584,27 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+.element-fade-in {
+  opacity: 0;
+  animation: fadeInVideo 2s ease-in-out forwards;
+}
+
+@keyframes fadeInVideo {
+  to {
+    opacity: 1;
+  }
+}
+
+.final-message {
+  padding: 10px 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+  display: inline-block;
+  transition: all 0.3s ease;
 }

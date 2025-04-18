@@ -54,7 +54,7 @@ const About = () => {
                         <span className='text-base leading-[24px]  font-normal text-[#AAA6C3]'>WELCOME TO THE JOURNEY</span>
                         <span className='md:text-4xl text-[24px] leading-[40px] font-bold font-poppins text-[#9354E4]'>Explore the Overview</span>
                     </div>
-                    <span className=' md:w-[55%] w-[90%] leading-[26px] font-poppins text-[#AAA6C3] text-[16px] font-light'>Hey there! 👋 I'm a passionate software developer, skilled in JavaScript and TypeScript. With expertise in Angular, Dotnet , and Three.js, I create beautiful and efficient solutions. Let's collaborate to transform your ideas into user-friendly, scalable realities. Ready for the journey? 🚀</span>
+                    <span className='  w-[90%] leading-[26px] font-poppins text-[#AAA6C3] text-[16px] font-light'>Hey there! 👋 I'm a passionate developer with a master's degree in software engineering. Skilled in both frontend and backend technologies, I create user-friendly and efficient digital solutions. My experience spans various programming languages and frameworks, with a strong focus on web development. I enjoy exploring new technologies, adapting quickly, and applying software engineering principles to solve real-world problems. Whether it's designing clean interfaces or optimizing complex systems, I'm always excited to take on new challenges and bring ideas to life. Ready to build something great? 🚀</span>
                     <div className='w-full flex lg:min-h-[400px] md:py-5 md:min-h-[400px] md:mt-2 mt-8  flex-wrap gap-y-10 md:gap-x-6 relative justify-evenly z-20 items-center '>
                         {tiles.map((tile, index) => {
                             return (
