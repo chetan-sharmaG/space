@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Testimonials from "./components/Testimonials";
+import Experience from "./components/Experience";
 import Starfield from "./components/StarField";
 
 const messages = [
@@ -125,8 +127,18 @@ function App() {
             <About />
           </div>
 
+          {/* Experience section (POC) shown before Skills */}
+          <div className="relative">
+            <Experience />
+          </div>
+
           <div className="relative" ref={skillsSectionRef}>
             <Skills />
+          </div>
+
+          {/* Testimonials (looping marquee) */}
+          <div className="relative">
+            <Testimonials />
           </div>
 
           <Projects />

@@ -1,0 +1,196 @@
+:root {
+  /* tuned to the site's space theme */
+  --page-bg: #040015; /* keep page dark */
+  --card-bg-1: rgba(11, 9, 20, 0.55); /* deep outer tone */
+  --card-bg-2: rgba(30, 12, 46, 0.4); /* subtle purple center */
+  --card-border: rgba(255, 255, 255, 0.04); /* thinner subtle border */
+  --card-shadow: 0 24px 64px rgba(0, 0, 0, 0.7);
+  --text-main: #f8f9ff;
+  --text-muted: #a9a6c9;
+  --accent-start: #7A5CFF; /* purple accent */
+  --accent-end: #3AD1FF; /* blue-teal accent */
+}
+
+/* Section wrapper – your page already uses #040015, this just enforces it here */
+.testimonials-section {
+  padding: 3.5rem 1.5rem 4rem;
+  color: var(--text-main);
+  overflow: hidden;
+}
+
+.testimonials-header {
+  max-width: 960px;
+  margin: 0 auto 2.5rem;
+}
+
+.testimonials-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.testimonials-header p {
+  /* max-width: 520px; */
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Marquee container */
+
+.testimonials-marquee {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; /* hide overflow, keep shadows soft */
+  background: transparent;
+}
+
+/* Edge fade – cards fade in/out as they enter/exit */
+.testimonials-marquee::before,
+.testimonials-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px; /* adjust width of fade zone */
+  pointer-events: none;
+  z-index: 2;
+}
+
+.testimonials-marquee::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--page-bg) 0%,
+    rgba(4, 0, 21, 0.9) 30%,
+    rgba(4, 0, 21, 0) 100%
+  );
+}
+
+.testimonials-marquee::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--page-bg) 0%,
+    rgba(4, 0, 21, 0.9) 30%,
+    rgba(4, 0, 21, 0) 100%
+  );
+}
+
+/* Track – JS will translate this for infinite scroll */
+.testimonials-track {
+  display: flex;
+  padding: 10px 0;
+  gap: 1.5rem;
+  background: transparent;
+  will-change: transform;
+}
+
+/* Card */
+
+.testimonial-card {
+  flex: 0 0 540px; /* keep the fixed width */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.007)
+  );
+  border-radius: 18px;
+  border: 1px solid var(--card-border);
+  padding: 1.6rem 1.9rem;
+  backdrop-filter: blur(12px) saturate(110%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0.98;
+  transition: transform 180ms ease-out, opacity 180ms ease-out,
+    box-shadow 180ms ease-out, border-color 180ms ease-out;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  opacity: 1;
+  border-color: rgba(122, 92, 255, 0.22);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.75),
+    0 0px 0px rgba(122, 92, 255, 0.04) inset;
+}
+
+.testimonial-text {
+  font-size: 0.96rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  opacity: 0.95;
+}
+
+/* Footer */
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.testimonial-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.testimonial-role {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Stars */
+
+.testimonial-stars {
+  display: flex;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.star {
+  color: var(--accent-start);
+  text-shadow: 0 0 8px rgba(122, 92, 255, 0.14);
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 85vw;
+    padding: 1.3rem 1.4rem;
+  }
+
+  .testimonial-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section {
+    padding: 3rem 1rem 3.5rem;
+  }
+
+  .testimonials-header h2 {
+    font-size: 1.4rem;
+  }
+}
