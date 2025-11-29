@@ -23,7 +23,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='skills-image w-[50%] md:block hidden h-[450px]'>
-                    <img src='/skill-svg.svg' className='w-full h-full object-contain '></img>
+                    <img src='/skill-svg.svg' alt="skill illustration" loading="lazy" className='w-full h-full object-contain ' />
                 </div>
                 <div className='vert-move md:flex bottonToTop w-full cursor-pointer absolute bottom-5 md:bottom-6  hidden items-center justify-center '>
                     <a href='#About' >

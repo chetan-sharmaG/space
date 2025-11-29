@@ -28,21 +28,35 @@ function App() {
   const skillsSectionRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    // store timer ids so we can cleanup on unmount
+    const intervalId = setInterval(() => {
       setCurrentMessage((prev) => {
         if (prev < messages.length - 1) {
           return prev + 1;
         } else {
-          clearInterval(interval);
-          setTimeout(() => {
+          clearInterval(intervalId);
+          // schedule the final transitions; store these ids so they can be cleared
+          const t1 = setTimeout(() => {
             setShowLastMessage(false);
-            setTimeout(() => setShowPortfolio(true), 800);
+            const t2 = setTimeout(() => setShowPortfolio(true), 800);
+            // attach t2 so cleanup can clear it
+            if (typeof window !== 'undefined') window.__portfolioT2 = t2;
           }, 10);
+          if (typeof window !== 'undefined') window.__portfolioT1 = t1;
         }
         return prev;
       });
     }, 600);
-    return () => clearInterval(interval);
+
+    return () => {
+      clearInterval(intervalId);
+      if (typeof window !== 'undefined') {
+        clearTimeout(window.__portfolioT1);
+        clearTimeout(window.__portfolioT2);
+        window.__portfolioT1 = null;
+        window.__portfolioT2 = null;
+      }
+    };
   }, []);
 
   // Observe when Skills section is in view
@@ -126,7 +140,7 @@ function App() {
                   window.scrollTo({ top: 0, behavior: "smooth" })
                 }
               >
-                <img src="/up-arrow.png" width={35} />
+                <img src="/up-arrow.png" width={35} alt="Scroll to top" loading="lazy" />
               </div>
             </div>
           )}

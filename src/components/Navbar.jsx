@@ -22,15 +22,15 @@ const Navbar = ({showPortfolio}) => {
         <>
             {showPortfolio && (
         <>
-          <div className="element-fade-in  md:w-[1250px] left-[50%] translate-x-[-50%] h-full z-[-10] absolute top-[-280px] flex flex-row items-start justify-center">
-            <video  className="w-full h-auto rotate-180" playsInline loop muted autoPlay  >
+                    <div className="element-fade-in  md:w-[1250px] left-[50%] translate-x-[-50%] h-full z-[-10] absolute top-[-280px] flex flex-row items-start justify-center">
+                        <video preload="metadata" className="w-full h-auto rotate-180 pointer-events-none" playsInline loop muted autoPlay  >
               <source src="/orbit1.webm" type="video/webm" />
               <source src="/orbit.mp4" type="video/mp4" />
 
             </video>
           </div>
-          <div className="element-fade-in  md:hidden w-full h-full z-[-10] absolute left-[50%] translate-x-[-50%] md:top-[-280px] sm:top-[-296px] top-[-300px] flex flex-row overflow-clip items-start justify-center">
-            <video className="w-full h-full rotate-180 scale-150" playsInline loop muted autoPlay src="/orbit.webm"></video>
+                    <div className="element-fade-in  md:hidden w-full h-full z-[-10] absolute left-[50%] translate-x-[-50%] md:top-[-280px] sm:top-[-296px] top-[-300px] flex flex-row overflow-clip items-start justify-center">
+                        <video preload="metadata" className="w-full h-full rotate-180 scale-150 pointer-events-none" playsInline loop muted autoPlay src="/orbit.webm"></video>
           </div>
         </>
       )}
@@ -45,7 +45,7 @@ const Navbar = ({showPortfolio}) => {
                     <a href='#contact' className='font-poppins hover:text-white'>Contact</a>
                 </div>
                 <div className='menu relative z-10 md:hidden '>
-                    <img ref={ref} onClick={() => menuButton()} src='/menu.svg' className='cursor-pointer'></img>
+                    <img ref={ref} onClick={() => menuButton()} src='/menu.svg' alt='menu toggle' className='cursor-pointer' />
                 </div>
                 {menuActive &&
                     <div className='w-[150px] md:hidden flex flex-col p-3 absolute items-start text-start justify-evenly bottom-[-165px] rounded-xl right-[30px] h-[160px] text-[#88869B] font-[500] text-lg bg-[#371c5c]'>

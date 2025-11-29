@@ -109,46 +109,55 @@ const Projects = () => {
                         <span className='md:text-[40px] text-[24px] leading-[40px] font-bold font-poppins text-[#9354E4]'>Projects</span>
                     </div>
                     <span className=' md:w-[70%] w-[90%] leading-[26px sm:leading-[30px] font-poppins text-[#AAA6C3] text-[17px] font-light'>Following projects showcases my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos in it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.</span>
-                    <div 
-                    // onMouseLeave={() => setFlippedCard(null)}
-                     className='flex   flex-wrap gap-5 justify-center  items-center w-[95%]  mx-auto'>
+                          <motion.div
+                          // onMouseLeave={() => setFlippedCard(null)}
+                            className='flex flex-wrap gap-5 justify-center items-center w-[95%] mx-auto'
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.05 }}
+                            variants={{
+                                hidden: {},
+                                // faster reveal, smaller stagger so cards appear quickly as the user scrolls
+                                visible: { transition: { staggerChildren: 0.08 } }
+                            }}
+                          >
                         {projects.map((project, index) => {
 
 
                             return (
                                 <motion.div
                                     key={project.projectGithub}
-                                    initial={{ opacity: 0, y: 100 }}
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    // animate={{ opacity: 1, x: 0 }}
-                                    variants={{
-                                        visible: { opacity: 1, y: 0 },
-                                        hidden: { opacity: 0, y: 100 }
-                                    }}
-                                    transition={{
-                                        duration: 0.5,
-                                        delay: index * 0.5,
-                                        ease: [0, 0.71, 0.2, 1.01],
-                                    }}
+                                    variants={{ visible: { opacity: 1, y: 0 }, hidden: { opacity: 0, y: 100 } }}
+                                    transition={{ duration: 0.5, ease: [0, 0.71, 0.2, 1.01] }}
                                 >
                                     <ReactCardFlip isFlipped={flippedCard === `project${index}`} flipDirection="horizontal" className='containerBox w-full h-full'>
                                         <div id='project'
 
                                             onMouseOver={() => setFlippedCard(`project${index}`)}
-                                            className='hover:z-[-1] flex flex-col sm:w-[370px] w-[300px] sm:max-h-[580px] min-h-[280px] max-h-[500px] p-4 gap-4 relative z-1 rounded-2xl bg-[#151030]  '>
-                                            <div className='w-full '>
-                                                <img src={project.projectImage} className='w-full rounded-lg     object-fill' />
+                                            className='hover:z-[-1] relative transform-gpu transition-transform duration-300 hover:scale-105 flex flex-col sm:w-[370px] w-[300px] sm:max-h-[580px] min-h-[280px] max-h-[500px] p-0 gap-4 z-1 rounded-2xl overflow-hidden bg-gradient-to-br from-[#0b0a14]/60 via-[#261a39]/30 to-[#071026]/30 border border-[#7042f8]/20 shadow-xl'>
+                                            <div className='w-full relative overflow-hidden'>
+                                                {/* responsive picture: AVIF -> WebP -> PNG fallback */}
+                                                <picture>
+                                                    <source type="image/avif" srcSet={`${project.projectImage.replace(/\.[^/.]+$/, '')}-1200.avif 1200w, ${project.projectImage.replace(/\.[^/.]+$/, '')}-768.avif 768w, ${project.projectImage.replace(/\.[^/.]+$/, '')}-480.avif 480w`} sizes="(max-width:640px) 100vw, 370px" />
+                                                    <source type="image/webp" srcSet={`${project.projectImage.replace(/\.[^/.]+$/, '')}-1200.webp 1200w, ${project.projectImage.replace(/\.[^/.]+$/, '')}-768.webp 768w, ${project.projectImage.replace(/\.[^/.]+$/, '')}-480.webp 480w`} sizes="(max-width:640px) 100vw, 370px" />
+                                                        <img src={project.projectImage} alt={`${project.projectName} screenshot`} loading="lazy" className='w-full h-[220px] object-cover block' />
+                                                </picture>
+                                                
+                                                    {/* floating planet accent */}
+                                                    <div className='absolute right-3 top-3 w-12 h-12 rounded-full bg-gradient-to-tr from-[#FF8ED4] via-[#7A5CFF] to-[#28D1FF] opacity-90 shadow-[0_6px_30px_rgba(122,92,255,0.18)] border border-white/10 flex items-center justify-center'>
+                                                        <div style={{ animation: 'spin 8s linear infinite' }} className='w-6 h-6 rounded-full bg-white/70' />
+                                                    </div>
+                                                    <div className='absolute inset-0 pointer-events-none bg-gradient-to-t from-black/60 via-transparent to-transparent' />
                                             </div>
-                                            <div className='flex justify-center  gap-2  flex-col w-full h-fit'>
-                                                <h1 className='font-normal font-poppins sm:text-[24px] text-[20px] '>{project.projectName}
+                                                <div className='flex justify-center gap-3 flex-col w-full h-fit p-4'>
+                                                    <h1 className='font-normal font-poppins sm:text-[24px] text-[20px] text-white tracking-wide'>{project.projectName}
                                                 </h1>
                                                 <h1 className='text-[14px] line-clamp-6 overflow-hidden font-normal text-[#AAA6C3]'>{project.projectDescription}</h1>
-                                                <div className='flex sm:flex-nowrap flex-wrap  gap-3 mt-3'>
+                                                <div className='flex sm:flex-nowrap flex-wrap gap-2 mt-3'>
                                                     {project.projectTechStack.map((tech, index1) => {
                                                         return (
 
-                                                            <h3 key={tech.name} className={`text-sm ${tech.color}`}>#{tech.name}</h3>
+                                                            <span key={tech.name} className={`inline-flex items-center gap-2 text-xs px-2 py-1 rounded-full bg-gradient-to-r from-white/5 to-white/2 border border-white/5 ${tech.color} shadow-sm`}>#{tech.name}</span>
                                                         )
                                                     })}
 
@@ -159,12 +168,16 @@ const Projects = () => {
                                         </div>
                                         <div id='project'
                                             onMouseLeave={() => setFlippedCard(null)}
-                                            className='flex flex-col sm::w-[370px] w-[370px] sm:max-h-[580px] min-h-[280px] max-h-[500px]   p-4 gap-4 relative z-1 rounded-2xl  bg-[#151030]  '>
+                                            className='flex flex-col sm::w-[370px] w-[370px] sm:max-h-[580px] min-h-[280px] max-h-[500px] p-6 gap-4 relative z-1 rounded-2xl bg-[linear-gradient(135deg,rgba(13,9,23,.62),rgba(36,16,54,.34))] border border-[#7042f8]/20'>
                                             <div className='relative   '>
                                                 <div className='w-full flex collapse flex-col gap-1 opacity-0 user-select-none  items-center justify-between'>
 
                                                     <div className='w-full  '>
-                                                        <img src={project.projectImage} className='w-full rounded-lg h-full object-fill' />
+                                                        <picture>
+                                                            <source type="image/avif" srcSet={`${project.projectImage.replace(/\.[^/.]+$/, '')}-1200.avif 1200w, ${project.projectImage.replace(/\.[^/.]+$/, '')}-768.avif 768w, ${project.projectImage.replace(/\.[^/.]+$/, '')}-480.avif 480w`} sizes="(max-width:640px) 100vw, 370px" />
+                                                            <source type="image/webp" srcSet={`${project.projectImage.replace(/\.[^/.]+$/, '')}-1200.webp 1200w, ${project.projectImage.replace(/\.[^/.]+$/, '')}-768.webp 768w, ${project.projectImage.replace(/\.[^/.]+$/, '')}-480.webp 480w`} sizes="(max-width:640px) 100vw, 370px" />
+                                                            <img src={project.projectImage} alt={`${project.projectName} screenshot`} loading="lazy" className='w-full rounded-lg h-full object-cover' />
+                                                        </picture>
                                                     </div>
                                                     <div className='flex justify-center  gap-2  flex-col w-full h-fit'>
                                                         <h1 className='font-bold text-[20px] sm:text-[24px] '>ch
@@ -179,6 +192,7 @@ const Projects = () => {
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div className='absolute -bottom-8 left-[5%] w-[90%] opacity-80 rounded-full blur-xl h-[60px] bg-gradient-to-r from-[#7a5cff]/20 via-[#3ad1ff]/8 to-[#7a5cff]/6 pointer-events-none' />
                                                 <div className='absolute top-0 flex flex-col gap-20 items-center justify-center w-full h-full'>
                                                     <div className="group relative ">
                                                         <button onClick={() => goTo(project.projectGithub)}>
@@ -235,7 +249,7 @@ const Projects = () => {
                         })}
 
 
-                    </div >
+                    </motion.div>
                 </div >
             </section >
         </>

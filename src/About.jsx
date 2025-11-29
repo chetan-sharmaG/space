@@ -89,7 +89,7 @@ const About = () => {
                                             ease: [0, 0.71, 0.2, 1.01]
                                         }}
 
-                                    > <img className='icons' src={tile.icons} width={60} />{tile.title}</motion.span>
+                                    > <img className='icons' src={tile.icons} alt={`${tile.title} icon`} loading="lazy" width={60} />{tile.title}</motion.span>
                                     <span
                                         className='group-hover:flex px-4  bg-[#151030]  rounded-[20px]   description hidden  z-10  font-poppins text-xl text-center leading-normal font-semibold'>{tile.description}
                                     </span>
@@ -111,7 +111,7 @@ const About = () => {
 export default About
 
 {/* <div id='box' className='relative group hover:scale-110  flex items-center  gradient-border w-[250px] h-[280px] bg-[#151030]  '>
-<motion.span
+                                <motion.span
     className='group-hover:hidden  font-xl flex flex-col gap-3 items-center justify-center font-poppins text-xl font-bold '
     ref={ref}
     initial="hidden"
@@ -123,7 +123,7 @@ export default About
         ease: [0, 0.71, 0.2, 1.01]
     }}
 
-> <img className='icons' src='/solver.png' width={60} />Problem solver</motion.span>
+> <img className='icons' src='/solver.png' alt="Problem Solver icon" loading="lazy" width={60} />Problem solver</motion.span>
 <span
     className='group-hover:flex px-4  bg-[#151030]  rounded-[20px]   description hidden  z-10  font-poppins text-xl text-center leading-normal font-semibold'
 
@@ -143,7 +143,7 @@ export default About
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01]
     }}
-> <img className='icons' src='/frontend.png' width={60} />Frontend Wizard</motion.span>
+> <img className='icons' src='/frontend.png' alt="Frontend Wizard icon" loading="lazy" width={60} />Frontend Wizard</motion.span>
 <span
     className='group-hover:flex px-4  bg-[#151030]  rounded-[20px]   description hidden  z-10  font-poppins text-xl text-center leading-normal font-semibold'
 
@@ -162,7 +162,7 @@ export default About
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01]
     }}
-><img className='icons' src='/backend.png' width={60} /> Backend Maestro</motion.span>
+><img className='icons' src='/backend.png' alt="Backend Maestro icon" loading="lazy" width={60} /> Backend Maestro</motion.span>
 <span
     className='group-hover:flex px-4  bg-[#151030]  rounded-[20px]   description hidden  z-10  font-poppins text-xl text-center leading-normal font-semibold'
 
@@ -181,7 +181,7 @@ export default About
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01]
     }}
-><img className='icons' src='/artisan.png' width={60} /> Code Artian</motion.span>
+><img className='icons' src='/artisan.png' alt="Code Artisan icon" loading="lazy" width={60} /> Code Artian</motion.span>
 <span
     className='group-hover:flex px-4   bg-[#151030]  rounded-[20px]   description hidden  z-10  font-poppins text-xl text-center leading-normal   font-bold'
 
