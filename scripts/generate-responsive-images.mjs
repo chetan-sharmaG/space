@@ -6,6 +6,7 @@ const publicDir = path.resolve(process.cwd(), 'public')
 
 const sources = [
   'newzifyDesk.png',
+  'Movie.png',
   'popcornDesk.png',
   'valTrackerDesk.png',
   'passkeeper1.png',

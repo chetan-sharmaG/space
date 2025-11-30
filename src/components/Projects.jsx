@@ -6,6 +6,20 @@ const Projects = () => {
   // no flipping behaviour — we show actions on the card directly
   const [projects, setprojects] = useState([
     {
+      projectIndex: "project0",
+      projectName: "WhatToWatch",
+      projectImage: "/Movie.png",
+      projectDescription:
+        "WhatToWatch is a smart movie discovery app built with React, designed to help users find films quickly and intuitively. It features a Netflix-inspired UI, a powerful search experience, and an AI-driven recommendation workflow.",
+      projectTechStack: [
+        { name: "React.js", color: "text-blue-500" },
+        { name: "Groq", color: "text-green-500" },
+        { name: "MUI", color: "text-red-500" },
+      ],
+      projectLink: "https://what-to-watch-beta.vercel.app/",
+      projectGithub: "https://github.com/chetan-sharmaG/MovieSysytem",
+    },
+    {
       projectIndex: "project1",
       projectName: "Newzify",
       projectImage: "/newzifyDesk.png",
@@ -228,7 +242,9 @@ const Projects = () => {
                               aria-label={`Open ${project.projectName} live preview`}
                               onClick={() => goTo(project.projectLink)}
                               className={`p-1 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 ${
-                                !project.projectLink ? "opacity-50 cursor-not-allowed" : ""
+                                !project.projectLink
+                                  ? "opacity-50 cursor-not-allowed"
+                                  : ""
                               }`}
                             >
                               <svg

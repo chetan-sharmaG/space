@@ -116,6 +116,21 @@
     0 0px 0px rgba(122, 92, 255, 0.04) inset;
 }
 
+/* Make cards focusable for keyboard users and provide visible focus state */
+.testimonial-card:focus-visible {
+  outline: none;
+  transform: translateY(-6px);
+  border-color: rgba(122, 92, 255, 0.34);
+  box-shadow: 0 6px 22px rgba(122, 92, 255, 0.08), 0 0px 0px rgba(122, 92, 255, 0.04) inset;
+}
+
+/* Respect users who request reduced motion by not auto-scrolling */
+@media (prefers-reduced-motion: reduce) {
+  .testimonials-track {
+    transform: none !important;
+  }
+}
+
 .testimonial-text {
   font-size: 0.96rem;
   line-height: 1.5;

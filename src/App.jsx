@@ -136,13 +136,15 @@ function App() {
             <Skills />
           </div>
 
+          
+
+          <Projects />
           {/* Testimonials (looping marquee) */}
           <div className="relative">
             <Testimonials />
           </div>
-
-          <Projects />
           <Contact />
+
           <Footer />
 
           {showScrollToTop && (
