@@ -46,10 +46,10 @@ const About = () => {
     }]
 
     return (
-        <section id='About' className='  lg:mt-[68px] mt-44'>
+        <section id='About' className='  lg:mt-[68px] mt-44 '>
            
-            <div className='min-h-[calc(100vh + 68px)] w-screen lg:w-full md:w-[90vw]  flex items-center justify-center '>
-                <div className='flex flex-col gap-6 md:w-[76%] w-[90%] mx-auto  text-white'>
+            <div className='min-h-[calc(100vh + 68px)]  lg:w-full md:w-[90vw]  w-[100vw]  mx-auto  flex items-center justify-center '>
+                <div className='flex flex-col gap-6 md:w-[78%] w-[90%] mx-auto  text-white'>
                     <div className='flex flex-col gap-1'>
                         <span className='text-base leading-[24px]  font-normal text-[#AAA6C3]'>WELCOME TO THE JOURNEY</span>
                         <span className='md:text-4xl text-[24px] leading-[40px] font-bold font-poppins text-[#9354E4]'>Explore the Overview</span>

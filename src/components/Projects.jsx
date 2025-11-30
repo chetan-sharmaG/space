@@ -122,15 +122,15 @@ const Projects = () => {
         className="w-full min-h-screen mb-44 text-white   lg:mt-[68px] mt-44"
       >
         <div className="flex   flex-col gap-6 justify-center lg:w-[80%] w-[85vw] md:w-[90vw] mx-auto">
-          <div className="flex flex-col gap-1 ">
+          <div className="flex flex-col gap-1 lg:pl-[10px]">
             <span className="text-base leading-[24px] font-normal text-[#AAA6C3]">
               MY WORK
             </span>
-            <span className="md:text-[40px] text-[24px] leading-[40px] font-bold font-poppins text-[#9354E4]">
+            <span className="md:text-[40px]  text-[24px] leading-[40px] font-bold font-poppins text-[#9354E4]">
               Projects
             </span>
           </div>
-          <span className=" md:w-[70%] w-[90%] leading-[26px sm:leading-[30px] font-poppins text-[#AAA6C3] text-[17px] font-light">
+          <span className=" lg:pl-[10px] md:w-[71%] w-[90%] leading-[26px sm:leading-[30px] font-poppins text-[#AAA6C3] text-[17px] font-light">
             Following projects showcases my skills and experience through
             real-world examples of my work. Each project is briefly described
             with links to code repositories and live demos in it. It reflects my

@@ -3,28 +3,136 @@ import "./testimonials.css";
 
 const TESTIMONIALS = [
   {
-    name: "Mickael Grants",
-    role: "CEO of Apples to Oranges",
+    name: "Kalyani Dhawale",
+    role: "UX/UI Designer at HashedIn",
     avatar:
-      "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=80",
+      "https://media.licdn.com/dms/image/v2/D5603AQG6MG5MYIS5Lg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1698935954939?e=1766016000&v=beta&t=NVpS06S8wEROQdcvSqVkozrdW3fyYGkmnWrp0uiTUvI",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/kalyanidhawale/",
+  },
+  {
+    name: "Ridima Udasi",
+    role: "SDE-II at HashedIn",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D4D03AQH0mkxMj7tQbA/profile-displayphoto-scale_400_400/B4DZo0nZvDHwAo-/0/1761819336921?e=1766016000&v=beta&t=plmBVjzXndeOn9U1CLONnTqpJJks8FZpGExUfztwCSc",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/ridima-udasi9598/",
+  },
+  {
+    name: "Amarnath Verma",
+    role: "Engineering Management Master at HashedIn",
+    avatar:
+      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     rating: 5,
   },
   {
-    name: "Sarah Johnson",
-    role: "Product Lead at NovaLabs",
+    name: "Chandan Mishra",
+    role: "SDE-II at HashedIn",
     avatar:
-      "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=80",
-    text: "Chetan delivers pixel-perfect interfaces, cares about performance, and is extremely reliable in fast-paced environments.",
+      "https://media.licdn.com/dms/image/v2/C5103AQE24JWnWyiJLg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1574151396488?e=1766016000&v=beta&t=E1_CD1PkpPtWprN4iiOf-PX13T7U7JC48VmlsQEV34A",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/chandan-kumar-mishra-691aba193/",
+  },
+  {
+    name: "Aditya Saxena",
+    role: "SDE-III at HashedIn",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D5603AQFCZO3yu1MwTw/profile-displayphoto-scale_400_400/B56Zei0pfLGQA4-/0/1750783401639?e=1766016000&v=beta&t=UF-fV1ul69Blj4Iy9zZyZlyKgJ6XTr-4O04sHJZeulo",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/aditya-saxena-68b01a185/",
+  },
+  {
+    name: "Abhinav Sharma",
+    role: "Product Specialist at HashedIn",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D5603AQFEddyZtdryfA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1716085474466?e=1766016000&v=beta&t=ptKNeJIZV2u9HJBPfnxWR8xCQlwK7V__SfwE5emx1H4",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/abhinav-sharma9132/",
+  },
+  {
+    name: "Vipul Jha",
+    role: "SDE-II at HashedIn",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D5603AQHReR24tZhODg/profile-displayphoto-scale_400_400/B56ZoFlkssKAAk-/0/1761030328106?e=1766016000&v=beta&t=-Th67A8fYIy0Adq8fCg8MYNaz0S8QP9PP19ciCdXSFw",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/thevipuljha/",
+  },
+  {
+    name: "Harsh Shrinivas Toraskar",
+    role: "Product Specialist at HashedIn",
+    avatar:
+      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     rating: 5,
   },
   {
-    name: "Arjun Mehta",
-    role: "Engineering Manager at GridPulse",
+    name: "Sonam Shivani",
+    role: "Product Analyst at HashedIn",
     avatar:
-      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=80",
-    text: "From complex tables to delightful UX details, his work consistently raises the bar for our frontend codebase.",
+      "https://media.licdn.com/dms/image/v2/C4E03AQE-40w0Lxr98g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1634405983353?e=1766016000&v=beta&t=KmgIkfRmdOP89I3n4HphJSTS_UiUci3KVLPeFLg8coo",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     rating: 5,
+    linkedin: "https://www.linkedin.com/in/sonam-shivani-a3284820a/",
+  },
+  {
+    name: "Harshita",
+    role: "SDET-I at HashedIn",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D5603AQF5puwIeo0Fjw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729593889508?e=1766016000&v=beta&t=RwCMjTpTmuJxxWS9OO-lfsF0r60M66cE4CQv__6DbYI",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/harshitha-raj-26446b197/",
+  },
+  {
+    name: "Zuhair Abbas",
+    role: "SDE-II at HashedIn",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D5603AQF5eXpA1bnHpA/profile-displayphoto-scale_400_400/B56Zpu8XlcG0Ag-/0/1762797911981?e=1766016000&v=beta&t=xkTik4Cq65wURRaUVZR4alIYiHQ_lF09dnUQNguf5Wo",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/zuhair-abbas07/",
+  },
+  {
+    name: "Sujitha P",
+    role: "Consultant at Deloitte",
+    avatar:
+      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+  },
+  {
+    name: "Kiran Daddala Kumar",
+    role: "SDE-II at Deloitte",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/C4D03AQFg_nb8k72LTw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1616848956820?e=1766016000&v=beta&t=fKij13U-adCfl4YtFrm9eYPPiap9FJiwlfxPqry6UAI",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/kirankumar-daddala-84a9241a0/",
+  },
+  {
+    name: "Ayush Mishra",
+    role: "Consultant at Deloitte",
+    avatar:
+      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/ayush-mishra-a52aa4140/",
+  },
+  {
+    name: "Aravindh Ravi",
+    role: "Manager at Deloitte",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/C5103AQFQ1ALG7LIqeA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1522150125365?e=1766016000&v=beta&t=1id1wJp4uXxXVc4eLP0Vp0P4oJooYBzOebubG8iYYqg",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    rating: 5,
+    linkedin: "https://www.linkedin.com/in/aravindh-ravi-46939366/",
   },
 ];
 
@@ -70,7 +178,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="testimonials-section  mb-44">
+    <section className="testimonials-section  mb-44 sm:pl-7">
       <div className="testimonials-header max-w-[1200px] md:w-[90vw] w-full mx-auto text-left lg:text-left">
         <div className="flex flex-col gap-1">
           <span className="text-base leading-[24px] font-normal text-[#AAA6C3]">
@@ -112,8 +220,9 @@ const Testimonials = () => {
                   <div>
                     <p className="testimonial-name flex gap-3 items-center">
                       {item.name}{" "}
-                      <a
-                        href="https://www.linkedin.com/in/chetan-sharma-a098281a0/"
+                      {item.linkedin && (
+                        <a
+                        href={item.linkedin}
                         target="_blank"
                       >
                         <svg
@@ -121,23 +230,30 @@ const Testimonials = () => {
                           width="15"
                           height="15"
                           fill="white"
-                          className="bi bi-linkedin"
+                          className="bi bi-linkedin hover:fill-[#0A66C2] transition-colors duration-200"
                           viewBox="0 0 16 16"
                         >
                           <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
                         </svg>
                       </a>
+                      )}
                     </p>
                     <p className="testimonial-role">{item.role}</p>
                   </div>
                 </div>
 
                 <div className="testimonial-stars">
-                  {Array.from({ length: item.rating }).map((_, i) => (
-                    <span key={i} className="star">
-                      ★
-                    </span>
-                  ))}
+                  {Array.from({ length: Number(item.rating || 0) }).map(
+                    (_, i) => (
+                      <span
+                        key={`${item.name}-star-${i}`}
+                        className="testimonial-star"
+                        aria-hidden="true"
+                      >
+                        ★
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </article>

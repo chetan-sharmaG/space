@@ -20,7 +20,7 @@ const SKILLS = [
 export default function Skills() {
     return (
         <section id="Skills" className="w-screen flex flex-col items-center justify-center lg:min-h-[70vh] mt-44 pb-12">
-            <div className="w-full flex flex-col justify-center  py-8  lg:w-[80%] w-[85vw] md:w-[90vw] mx-auto">
+            <div className=" flex flex-col justify-center  py-8  w-[85vw]  lg:w-[80%] max-w-[1200px] md:w-[90vw] mx-auto">
                 <div className="mb-6 text-left lg:text-left">
                     <p className="text-base text-[#AAA6C3]">MY TOOLBOX</p>
                     <h2 className="text-3xl md:text-4xl font-bold text-[#9354E4] font-poppins mt-2">Skills & Tools</h2>

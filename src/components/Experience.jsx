@@ -49,7 +49,7 @@ const Timeline = () => {
   };
 
   return (
-    <div className="w-full flex justify-center mt-12 px-4">
+    <div id='Career' className="w-full flex justify-center mt-12 px-4">
       {/* flex-col on mobile, row on >= sm */}
       <div className="flex flex-col sm:flex-row items-stretch max-w-[750px] w-full">
         {/* LEFT: logo + line */}
