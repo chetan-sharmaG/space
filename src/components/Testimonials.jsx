@@ -7,7 +7,7 @@ const TESTIMONIALS = [
     role: "UX/UI Designer at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQG6MG5MYIS5Lg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1698935954939?e=1766016000&v=beta&t=NVpS06S8wEROQdcvSqVkozrdW3fyYGkmnWrp0uiTUvI",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Chetan consistently turned complex UX flows into clean, intuitive interfaces. His attention to detail and ability to translate design intent into responsive, production-ready components made collaboration seamless.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/kalyanidhawale/",
   },
@@ -16,16 +16,15 @@ const TESTIMONIALS = [
     role: "SDE-II at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/D4D03AQH0mkxMj7tQbA/profile-displayphoto-scale_400_400/B4DZo0nZvDHwAo-/0/1761819336921?e=1766016000&v=beta&t=plmBVjzXndeOn9U1CLONnTqpJJks8FZpGExUfztwCSc",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "His routing migration work and system-level thinking stood out. Chetan approaches problems methodically and ensures solutions align with long-term architecture rather than just short-term fixes.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/ridima-udasi9598/",
   },
   {
     name: "Amarnath Verma",
     role: "Engineering Management Master at HashedIn",
-    avatar:
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    avatar: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    text: "Chetan takes ownership end-to-end. His work on multi-module navigation, permission workflows, and UI consistency significantly improved overall platform usability and reduced operational friction.",
     rating: 5,
   },
   {
@@ -33,7 +32,7 @@ const TESTIMONIALS = [
     role: "SDE-II at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/C5103AQE24JWnWyiJLg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1574151396488?e=1766016000&v=beta&t=E1_CD1PkpPtWprN4iiOf-PX13T7U7JC48VmlsQEV34A",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Chetan has a strong grasp of React fundamentals and modern patterns. His Vite migration, reusable hooks, and architecture refinements improved performance and made development easier for the entire team.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/chandan-kumar-mishra-691aba193/",
   },
@@ -42,7 +41,7 @@ const TESTIMONIALS = [
     role: "SDE-III at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQFCZO3yu1MwTw/profile-displayphoto-scale_400_400/B56Zei0pfLGQA4-/0/1750783401639?e=1766016000&v=beta&t=UF-fV1ul69Blj4Iy9zZyZlyKgJ6XTr-4O04sHJZeulo",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Chetan demonstrated solid engineering judgement across multiple modules. He breaks down complex tasks cleanly, communicates clearly, and consistently delivers maintainable, well-structured code.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/aditya-saxena-68b01a185/",
   },
@@ -51,7 +50,7 @@ const TESTIMONIALS = [
     role: "Product Specialist at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQFEddyZtdryfA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1716085474466?e=1766016000&v=beta&t=ptKNeJIZV2u9HJBPfnxWR8xCQlwK7V__SfwE5emx1H4",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "He quickly understood functional requirements and translated them into stable UI workflows. Several enhancements he delivered directly improved the day-to-day efficiency of internal users.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/abhinav-sharma9132/",
   },
@@ -60,16 +59,15 @@ const TESTIMONIALS = [
     role: "SDE-II at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQHReR24tZhODg/profile-displayphoto-scale_400_400/B56ZoFlkssKAAk-/0/1761030328106?e=1766016000&v=beta&t=-Th67A8fYIy0Adq8fCg8MYNaz0S8QP9PP19ciCdXSFw",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "His work on deep-linking and navigation made the platform far more cohesive. Chetan thinks about edge cases proactively and builds solutions that hold up in real usage.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/thevipuljha/",
   },
   {
     name: "Harsh Shrinivas Toraskar",
     role: "Product Specialist at HashedIn",
-    avatar:
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    avatar: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    text: "Chetan consistently delivered improvements that made complex workflows easier to operate. His iterative approach brought clarity to several high-usage screens.",
     rating: 5,
   },
   {
@@ -77,7 +75,7 @@ const TESTIMONIALS = [
     role: "Product Analyst at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/C4E03AQE-40w0Lxr98g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1634405983353?e=1766016000&v=beta&t=KmgIkfRmdOP89I3n4HphJSTS_UiUci3KVLPeFLg8coo",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Chetan delivers with precision and consistency. The global search and workflow refinements he contributed had a noticeable impact on operational efficiency.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/sonam-shivani-a3284820a/",
   },
@@ -86,7 +84,7 @@ const TESTIMONIALS = [
     role: "SDET-I at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQF5puwIeo0Fjw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729593889508?e=1766016000&v=beta&t=RwCMjTpTmuJxxWS9OO-lfsF0r60M66cE4CQv__6DbYI",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "He maintains a strong focus on stability and edge-case handling. The structured UI logic he built reduced regressions and made testing cycles more predictable.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/harshitha-raj-26446b197/",
   },
@@ -95,16 +93,15 @@ const TESTIMONIALS = [
     role: "SDE-II at HashedIn",
     avatar:
       "https://media.licdn.com/dms/image/v2/D5603AQF5eXpA1bnHpA/profile-displayphoto-scale_400_400/B56Zpu8XlcG0Ag-/0/1762797911981?e=1766016000&v=beta&t=xkTik4Cq65wURRaUVZR4alIYiHQ_lF09dnUQNguf5Wo",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Chetan writes clean, modular code with a strong understanding of state management. His improvements across multiple modules made the codebase more reliable and easier to extend.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/zuhair-abbas07/",
   },
   {
     name: "Sujitha P",
     role: "Consultant at Deloitte",
-    avatar:
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    avatar: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    text: "He consistently delivered user-focused UI solutions with technical depth. The dashboards he contributed to improved both speed and clarity for end users.",
     rating: 5,
   },
   {
@@ -112,16 +109,15 @@ const TESTIMONIALS = [
     role: "SDE-II at Deloitte",
     avatar:
       "https://media.licdn.com/dms/image/v2/C4D03AQFg_nb8k72LTw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1616848956820?e=1766016000&v=beta&t=fKij13U-adCfl4YtFrm9eYPPiap9FJiwlfxPqry6UAI",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Chetan brought clarity and performance improvements to several modules. His ability to break down complex UI flows and optimize them was extremely valuable.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/kirankumar-daddala-84a9241a0/",
   },
   {
     name: "Ayush Mishra",
     role: "Consultant at Deloitte",
-    avatar:
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
-     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    avatar: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+    text: "He handled multi-step workflows with maturity and precision. Chetan’s optimization of rendering and state flow helped reduce UI bottlenecks significantly.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/ayush-mishra-a52aa4140/",
   },
@@ -130,11 +126,12 @@ const TESTIMONIALS = [
     role: "Manager at Deloitte",
     avatar:
       "https://media.licdn.com/dms/image/v2/C5103AQFQ1ALG7LIqeA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1522150125365?e=1766016000&v=beta&t=1id1wJp4uXxXVc4eLP0Vp0P4oJooYBzOebubG8iYYqg",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Chetan consistently delivered reliable, maintainable frontend solutions with minimal supervision. His ownership over navigation, permissions, and workflow improvements contributed strongly to the project's success.",
     rating: 5,
     linkedin: "https://www.linkedin.com/in/aravindh-ravi-46939366/",
   },
 ];
+
 
 const Testimonials = () => {
   // Duplicate data so the animation can loop seamlessly
