@@ -34,21 +34,21 @@ const Projects = () => {
       projectLink: "https://newzify-news-app.vercel.app/",
       projectGithub: "https://github.com/chetan-sharmaG/Newzify-News-App",
     },
-    {
-      projectIndex: "project2",
-      projectName: "BuyMeAPopcorn",
-      projectImage: "/popcornDesk.png",
-      projectDescription:
-        "Popcorn is a user-friendly platform where creators showcase their work and connect with fans. Earn 'popcorns,' a unique currency, sent straight to your Razorpay account without service charges. Be a creator, a fan, or both, and enjoy secure, private, and fun interactions. Let’s get popping!",
-      projectTechStack: [
-        { name: "Next.js", color: "text-blue-500" },
-        { name: "Tailwind", color: "text-green-500" },
-        { name: "Firebase", color: "text-red-500" },
-        { name: "MongoDb", color: "text-yellow-500" },
-      ],
-      projectLink: "https://get-me-a-pop-corn.vercel.app/",
-      projectGithub: "https://github.com/chetan-sharmaG/get_Me_a_PopCorn",
-    },
+    // {
+    //   projectIndex: "project2",
+    //   projectName: "BuyMeAPopcorn",
+    //   projectImage: "/popcornDesk.png",
+    //   projectDescription:
+    //     "Popcorn is a user-friendly platform where creators showcase their work and connect with fans. Earn 'popcorns,' a unique currency, sent straight to your Razorpay account without service charges. Be a creator, a fan, or both, and enjoy secure, private, and fun interactions. Let’s get popping!",
+    //   projectTechStack: [
+    //     { name: "Next.js", color: "text-blue-500" },
+    //     { name: "Tailwind", color: "text-green-500" },
+    //     { name: "Firebase", color: "text-red-500" },
+    //     { name: "MongoDb", color: "text-yellow-500" },
+    //   ],
+    //   projectLink: "https://get-me-a-pop-corn.vercel.app/",
+    //   projectGithub: "https://github.com/chetan-sharmaG/get_Me_a_PopCorn",
+    // },
     {
       projectIndex: "project3",
       projectName: "VALTRACKER",
@@ -64,36 +64,36 @@ const Projects = () => {
       projectLink: "https://val-t-racker.vercel.app/",
       projectGithub: "https://github.com/chetan-sharmaG/ValTRacker",
     },
-    {
-      projectIndex: "project4",
-      projectName: "PassKeeper",
-      projectImage: "/passkeeper1.png",
-      projectDescription:
-        "Welcome to 'PassKeeper' - your very own digital keyring! Our handy tool stashes your URLs, usernames, and passwords, storing them securely in your local treasure chest or our impregnable Google cloud vault. Accessible anytime, anywhere, on any device - forget about forgetting passwords, let's make memory loss fun!",
-      projectTechStack: [
-        { name: "React.js", color: "text-blue-500" },
-        { name: "NodeJs", color: "text-green-500" },
-        { name: "Tailwind", color: "text-red-500" },
-        { name: "MongoDb", color: "text-yellow-500" },
-      ],
-      projectLink: "https://chetan-sharmag.github.io/ReactPassKeeper/",
-      projectGithub: "https://github.com/chetan-sharmaG/PassKeeper",
-    },
-    {
-      projectIndex: "project5",
-      projectName: "CLassRoom",
-      projectImage: "/classroom.png",
-      projectDescription:
-        "ClassRoom is a mobile application built with Flutter, revolutionizing education by streamlining student engagement and facilitating communication within educational institutions. It offers features like a notes organizer, calendar manager, announcement broadcaster, user directory, and ERP integration, all in a user-friendly interface. ClassRoom enhances learning experiences and efficiently manages course materials and announcements.",
-      projectTechStack: [
-        { name: "Flutter", color: "text-blue-500" },
-        { name: "Firebase", color: "text-green-500" },
-        { name: "Dart", color: "text-red-500" },
-        // { name: "Firebase", color: "text-yellow-500" }
-      ],
-      projectLink: "",
-      projectGithub: "https://github.com/chetan-sharmlinaG/ClassRoom",
-    },
+    // {
+    //   projectIndex: "project4",
+    //   projectName: "PassKeeper",
+    //   projectImage: "/passkeeper1.png",
+    //   projectDescription:
+    //     "Welcome to 'PassKeeper' - your very own digital keyring! Our handy tool stashes your URLs, usernames, and passwords, storing them securely in your local treasure chest or our impregnable Google cloud vault. Accessible anytime, anywhere, on any device - forget about forgetting passwords, let's make memory loss fun!",
+    //   projectTechStack: [
+    //     { name: "React.js", color: "text-blue-500" },
+    //     { name: "NodeJs", color: "text-green-500" },
+    //     { name: "Tailwind", color: "text-red-500" },
+    //     { name: "MongoDb", color: "text-yellow-500" },
+    //   ],
+    //   projectLink: "https://chetan-sharmag.github.io/ReactPassKeeper/",
+    //   projectGithub: "https://github.com/chetan-sharmaG/PassKeeper",
+    // },
+    // {
+    //   projectIndex: "project5",
+    //   projectName: "CLassRoom",
+    //   projectImage: "/classroom.png",
+    //   projectDescription:
+    //     "ClassRoom is a mobile application built with Flutter, revolutionizing education by streamlining student engagement and facilitating communication within educational institutions. It offers features like a notes organizer, calendar manager, announcement broadcaster, user directory, and ERP integration, all in a user-friendly interface. ClassRoom enhances learning experiences and efficiently manages course materials and announcements.",
+    //   projectTechStack: [
+    //     { name: "Flutter", color: "text-blue-500" },
+    //     { name: "Firebase", color: "text-green-500" },
+    //     { name: "Dart", color: "text-red-500" },
+    //     // { name: "Firebase", color: "text-yellow-500" }
+    //   ],
+    //   projectLink: "",
+    //   projectGithub: "https://github.com/chetan-sharmlinaG/ClassRoom",
+    // },
   ]);
   const control = useAnimation();
 

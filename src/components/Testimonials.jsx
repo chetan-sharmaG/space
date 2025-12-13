@@ -239,19 +239,7 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                <div className="testimonial-stars">
-                  {Array.from({ length: Number(item.rating || 0) }).map(
-                    (_, i) => (
-                      <span
-                        key={`${item.name}-star-${i}`}
-                        className="testimonial-star"
-                        aria-hidden="true"
-                      >
-                        ★
-                      </span>
-                    )
-                  )}
-                </div>
+            
               </div>
             </article>
           ))}
